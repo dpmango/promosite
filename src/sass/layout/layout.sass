@@ -10,15 +10,47 @@ a
     text-decoration: none
     color: inherit
 
+label
+  font-size: 16px
+
+.color--gray
+  color: $borderColor
+
+// Helpers
+.pt15
+  margin-top: 15px
+
+.mt20
+  margin-top: 20px
+
+.mt40
+  margin-top: 40px
+
+.mt50
+  margin-top: 50px
+
+.heading
+  font-size: 60px
+  line-height: 1.2em
+  font-weight: 300
+  margin-bottom: 10px
+
+.heading--light
+  font-size: 40px
+
 
 // Layout
 body
   font-size: 14px
   font-family: "Helvetica"
+  color: #333333
 
 .container
   width: 100%
   max-width: 1200px
+
+.no-pad
+  padding: 0
 
 .header
   position: absolute
@@ -29,8 +61,35 @@ body
 
 .hero
   height: 100vh
-  min-height: 1080px
+  min-height: 800px
   background: url('../images/bg-hero.png') no-repeat center
   background-size: cover
   padding-top: 180px
   color: white
+
+.services
+  padding-top: 80px
+
+.steps
+  font-weight: 300
+
+.cta
+  margin-top: 150px
+  &::before
+    display: block
+    content: ' '
+    background: url('../images/bg-cta-up.png') no-repeat center
+    background-size: cover
+    height: 280px
+  &::after
+    display: block
+    content: ' '
+    background: url('../images/bg-cta-down.png') no-repeat center
+    background-size: cover
+    height: 280px
+
+.portfolio
+  padding-top: 80px
+
+.testimonials
+  padding-top: 80px

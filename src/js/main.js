@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+  // Services hover
+  $('.service__block').hover(function(){
+    if( $(this).closest('.row').data('hover') == "on" ){
+      $(this).find('.service__block-hide').css('opacity', '1');
+      $('.service__block-hide').hover(function(){
+        $(this).css('opacity', '1');
+      });
+    }
+  }, function(){
+    $(this).find('.service__block-hide').css('opacity', '0');
+  });
+
  	// Prevent # errors
 	$('[href="#"]').click(function (e) {
 		e.preventDefault();
