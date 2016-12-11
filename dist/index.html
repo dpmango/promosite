@@ -1,535 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- FRONT-END WITH LOVE -.- SERGEY KHMELEVSKOY -.- -->
-	<!-- Follow BEM methodology and SMACSS to manage stylesheets -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>page title </title>
-	<script src="js/main.min.js"></script>
-	<link rel="stylesheet" href="css/style.min.css">
-	<!--[if lt IE 9]>
-    <script src="js/lib/html5shiv.min.js"></script>
-  <![endif]-->
-</head>
+  <head>
+    <meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Promosite html</title>
+    <style>
+    *{padding: 0;  margin: 0;}
+		body{
+			font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+			font-size: 16px;
+			color: rgba(0,0,0,.7);
+			min-height: 100vh;
+			height: auto;
+			background-color: #f8f8f8;
+  		overflow-x: hidden;
+		}
+		a{color: inherit; text-decoration: none;}
+    h1{
+      margin: 5vh 3vw 0 3vw;
+      color: rgba(0,0,0,.7);
+      border-bottom: 2px solid rgba(0,0,0,.2);
+      display: block;
+    }
+		.links{
+ 			background-color: white;
+      border:  2px solid rgba(0,0,0,.2);
+ 			border-radius: 10px;
+ 			margin: 5vh 3vw;
+ 			padding: 5vh 3vw;
+ 			width: 35vw;
+ 			float: left;
+  		}
+		ul{list-style: none;}
+		a{
+			display: inline-block;
+			padding: 1vh 0vw 1vh 2vw;
+			width: 95%;
+      border-left: 4px solid transparent;
+			border-bottom: 1px solid rgba(0,0,0,.2);
+		}
+		a:hover{
+			border-left: 4px solid #26b690;
+      background: rgba(0,0,0,.1);
+			border-bottom: 1px solid rgba(0,0,0,.4);
+		}
+		h2{
+			margin-bottom: 3vh;
+		}
+    </style>
+  </head>
 
 <body>
-	<!-- HEADER: START -->
-	<header class="header">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-					<a href="#">
-						<img src="images/logo.png" class="img-fluid" alt="">
-					</a>
-				</div>
-				<div class="col-sm-6">
-					<div class="header__slogan">
-						Умножаем продажи!
-						<span>Приводим новых клиентов в Ваш бизнес</span>
-					</div>
-				</div>
-				<div class="col-sm-2">
-					<div class="header__brief">
-						<a href="#">
-							<i class="ico ico--brief"></i>
-							<span class="header__brief-name">Бриф</span>
-							<span class="header__brief-action">Скачать и заполнить</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-	<!-- HEADER: END -->
-
-	<!-- HERO: START -->
-	<section class="hero">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-8">
-					<div class="hero__navi">
-						<a href="#">Главная</a>
-						<a href="#">Услуги</a>
-						<a href="#">Портфолио</a>
-						<a href="#">Отзывы</a>
-						<a href="#">Полезная информация</a>
-						<a href="#">Контакты</a>
-					</div>
-				</div>
-				<div class="col-sm-4 text-sm-right">
-					<div class="hero__phone">
-						<i class="ico ico--hero-phone"></i>
-						<div class="hero__phone-wrapper">
-							<a href="tel:88006744438" class="hero__phone-number">8 800 674 44 38</a>
-							<a href="#" class="hero__phone-callback">заказать обратный звонок</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row hero__title">
-				<div class="col-sm-12">
-					<div class="hero__title__main">
-						Разрабатываем сайты
-						<span>приносящие прибыль</span>
-					</div>
-					<div class="row">
-						<div class="col-md-6 offset-md-3">
-							<div class="hero__form">
-								<span>Оставьте Ваш телефон и мы свяжемся с Вами в ближайшее время</span>
-								<form action="">
-									<input type="text" name="phone" class="form-input" placeholder="+7 (356) 000 00 00">
-									<button type="submit" class="btn btn--green">Отправить заявку сейчас</button>
-								</form>
-							</div>
-							<div class="hero__icons">
-								<div class="row">
-									<div class="col-sm-4">
-										<i class="ico ico--hero-1"></i>
-										<span>Быстрые сроки</span>
-									</div>
-									<div class="col-sm-4">
-										<i class="ico ico--hero-2"></i>
-										<span>Разумные цены</span>
-									</div>
-									<div class="col-sm-4">
-										<i class="ico ico--hero-3"></i>
-										<span>Высокое качество</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- HERO: START -->
-
-	<!-- SERVICES: START -->
-	<section class="services">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="heading text-xs-center">Основные направления нашей деятельности:</div>
-				</div>
-			</div>
-			<div class="row" data-hover="on">
-				<div class="col-sm-3">
-					<div class="service__block">
-						<i class="ico ico--service-1"></i>
-						<span>Разработка сайта визитки</span>
-						<div class="service__block-hide">
-							<a href="#" class="btn btn--outline btn--block">Подробнее</a>
-							<a href="#" class="btn btn--main btn--block">Заказать</a>
-						</div>
-					</div>
-				</div>
-				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
-						<i class="ico ico--service-2"></i>
-						<span>Разработка интернет-магазина</span>
-						<div class="service__block-hide">
-							<a href="#" class="btn btn--outline btn--block">Подробнее</a>
-							<a href="#" class="btn btn--main btn--block">Заказать</a>
-						</div>
-					</div>
-				</div>
-				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
-						<i class="ico ico--service-3"></i>
-						<span>Разработка лендинг пейдж</span>
-						<div class="service__block-hide">
-							<a href="#" class="btn btn--outline btn--block">Подробнее</a>
-							<a href="#" class="btn btn--main btn--block">Заказать</a>
-						</div>
-					</div>
-				</div>
-				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
-						<i class="ico ico--service-4"></i>
-						<span>Разработка лендинг магазина</span>
-						<div class="service__block-hide">
-							<a href="#" class="btn btn--outline btn--block">Подробнее</a>
-							<a href="#" class="btn btn--main btn--block">Заказать</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row pt15" data-hover="0">
-				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
-						<i class="ico ico--service-5"></i>
-						<span>Разработка корпоративного сайта</span>
-						<div class="service__block-hide">
-							<a href="#" class="btn btn--outline btn--block">Подробнее</a>
-							<a href="#" class="btn btn--main btn--block">Заказать</a>
-						</div>
-					</div>
-				</div>
-				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
-						<i class="ico ico--service-6"></i>
-						<span>Поддержка сайтов</span>
-						<div class="service__block-hide">
-							<a href="#" class="btn btn--outline btn--block">Подробнее</a>
-							<a href="#" class="btn btn--main btn--block">Заказать</a>
-						</div>
-					</div>
-				</div>
-				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
-						<i class="ico ico--service-7"></i>
-						<span>Продвижение сайтов</span>
-						<div class="service__block-hide">
-							<a href="#" class="btn btn--outline btn--block">Подробнее</a>
-							<a href="#" class="btn btn--main btn--block">Заказать</a>
-						</div>
-					</div>
-				</div>
-				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
-						<i class="ico ico--service-8"></i>
-						<span>Рекламная компания</span>
-						<div class="service__block-hide">
-							<a href="#" class="btn btn--outline btn--block">Подробнее</a>
-							<a href="#" class="btn btn--main btn--block">Заказать</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- SERVICES: END -->
-
-	<!-- STEPS: START -->
-	<section class="steps">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="heading heading--light text-xs-center">Работаем в 4 этапа</div>
-					<div class="heading text-xs-center">Создание сайта от 8 до 28 дней</div>
-				</div>
-			</div>
-			<div class="row mt50">
-				<div class="col-sm-4">
-					<div class="steps__desc">
-						<div class="steps__desc-numbs">
-							<i class="ico ico-step-num ico-step-num-1">1</i>
-						</div>
-						<div class="steps__desc__text">
-							<div class="steps__desc-heading">
-								Подготовка
-							</div>
-							<div class="steps__desc-desc">
-								Заполняем бриф, уточняем все тонкости и моменты при разработке дизайна, создании сайта, подписываем договор, выставляем счет на предоплату
-							</div>
-						</div>
-					</div>
-					<div class="steps__desc">
-						<div class="steps__desc-numbs">
-							<i class="ico ico-step-num ico-step-num-3">3</i>
-						</div>
-						<div class="steps__desc__text">
-							<div class="steps__desc-heading">
-								Программирование
-							</div>
-							<div class="steps__desc-desc">
-								Воплощаем дизайн в код. Наша команда программистов создаст в короткие сроки качественный код для вашего сайта. Результат вы сможете протестировать перед оплатой
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- rotated blocks -->
-				<div class="col-sm-4">
-					<div class="steps__blocks">
-						<div class="steps__block steps__block--1">
-							<i class="ico ico--step-block-1"></i>
-						</div>
-						<div class="steps__block steps__block--2">
-							<i class="ico ico--step-block-2"></i>
-						</div>
-						<div class="steps__block steps__block--3">
-							<i class="ico ico--step-block-3"></i>
-						</div>
-						<div class="steps__block steps__block--4">
-							<i class="ico ico--step-block-4"></i>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="steps__desc">
-						<div class="steps__desc-numbs">
-							<i class="ico ico-step-num ico-step-num-2">2</i>
-						</div>
-						<div class="steps__desc__text">
-							<div class="steps__desc-heading">
-								Дизайн
-							</div>
-							<div class="steps__desc-desc">
-								Мы создаем уникальный дизайн веб-страниц. Разрабатываем яркие сайты, которые отличаются своим первоклассным дизайном и хорошей узнаваемостью. Согласовываем с заказчиком макет сайта
-							</div>
-						</div>
-					</div>
-					<div class="steps__desc">
-						<div class="steps__desc-numbs">
-							<i class="ico ico-step-num ico-step-num-4">4</i>
-						</div>
-						<div class="steps__desc__text">
-							<div class="steps__desc-heading">
-								Сдача проекта
-							</div>
-							<div class="steps__desc-desc">
-								Выставляем счет на оплату сайта. Устанавливаем на хостинг и cms, тестируем повторно
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- STEPS: END -->
-
-	<!-- CTA: START -->
-	<section class="cta">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="row">
-						<div class="col-sm-6 col-md-4 no-pad offset-md-1">
-							<div class="heading">Заказать сайт</div>
-							<div class="cta__from">
-								<div class="cta__from-heading">
-									Оставьте Ваш телефон и мы свяжемся с Вами в ближайшее время
-								</div>
-								<form action="">
-									<div class="row mt20">
-										<div class="col-sm-4">
-											<label class="cta__form-label">Ваш телефон</label>
-										</div>
-										<div class="col-sm-8">
-											<input type="text" name="phone" class="form-input form-input--block" placeholder="+7 (356) 000 00 00">
-											<button type="submit" class="btn btn--main btn--block btn--gap">Отправить заявку сейчас</button>
-										</div>
-									</div>
-								</form>
-
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4 offset-md-1">
-							<div class="cta__services">
-								<div class="cta__services-name">Сайт визитка</div>
-								<div class="cta__services-desc">Сайт визитка состоит из система управления сайтом, домен и хостинг в подарок, карта сайта, онлайн консультант и другие модули</div>
-							</div>
-							<div class="cta__services">
-								<div class="cta__services-name">ЛЕНДИНГ ПЕЙДЖ</div>
-								<div class="cta__services-desc">Landing pаge, это полноценный сaйт, но состоящий из одной страницы разбитой на информационные блоки. Мы максимально красочно донесем до клиента информацию о товаре или услуге</div>
-							</div>
-							<div class="cta__services">
-								<div class="cta__services-name">ИНТЕРНЕТ МАГАЗИН</div>
-								<div class="cta__services-desc">Это онлайн магазин, представляющий как готовый оффлайновый бизнес, так и бизнес с нуля, для продажи Ваших товаров</div>
-							</div>
-							<div class="cta__services">
-								<div class="cta__services-name">КОРПОРАТИВНЫЙ САЙТ</div>
-								<div class="cta__services-desc">Корпоративный сайта - выбор крупных компаttний, которым нужно не только яркое представительство в интернете, но и многофункциональные модули и премиум дизайн</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- CTA: END -->
-
-	<!-- PRORTFOLIO: START -->
-	<section class="portfolio">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="heading color--gray text-xs-center">Портфолио</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="portfolio__item">
-						<img src="images/portfolio-1.png" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="portfolio__item">
-						<img src="images/portfolio-2.png" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="portfolio__item">
-						<img src="images/portfolio-3.png" class="img-fluid">
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<!-- next row -->
-				<div class="col-sm-4">
-					<div class="portfolio__item">
-						<img src="images/portfolio-4.png" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="portfolio__item">
-						<img src="images/portfolio-5.png" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="portfolio__item">
-						<img src="images/portfolio-6.png" class="img-fluid">
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<!-- next row -->
-				<div class="col-sm-4">
-					<div class="portfolio__item">
-						<img src="images/portfolio-7.png" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="portfolio__item">
-						<img src="images/portfolio-8.png" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="portfolio__item">
-						<img src="images/portfolio-9.png" class="img-fluid">
-					</div>
-				</div>
-				<!-- next row -->
-			</div>
-			<div class="row">
-				<div class="col-sm-12 text-xs-center">
-					<a href="#" class="btn btn--green">Посмотреть еще</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- PRORTFOLIO: END -->
-
-
-	<!-- TESTIMONIALS: START -->
-	<div class="testimonials">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="heading text-xs-center">Отзывы</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-10 offset-sm-1">
-					<div class="owl-carousel" id="owl-testimonials">
-						<div class="testimonial">
-							<div class="row">
-								<div class="col-sm-8">
-									<div class="testimonial__name">Сеть магазинов «Мастер Сантехник», ИП Семенчук И.В.</div>
-									<div class="testimonial__desc">«Благодаря работе по продвижению на сайте в день присутствует более 200 человек, которые нашли нас через поисковую систему»</div>
-									<a href="#" class="btn btn--blue mt80">Смотреть все (15)</a>
-								</div>
-								<div class="col-sm-4">
-									<img src="images/testimonial-1.png" class="img-fluid" alt="">
-								</div>
-							</div>
-						</div>
-						<!-- next slide -->
-						<div class="testimonial">
-							<div class="row">
-								<div class="col-sm-8">
-									<div class="testimonial__name">Сеть магазинов «Мастер Сантехник», ИП Семенчук И.В.</div>
-									<div class="testimonial__desc">«Благодаря работе по продвижению на сайте в день присутствует более 200 человек, которые нашли нас через поисковую систему»</div>
-									<a href="#" class="btn btn--blue mt80">Смотреть все (15)</a>
-								</div>
-								<div class="col-sm-4">
-									<img src="images/testimonial-1.png" class="img-fluid" alt="">
-								</div>
-							</div>
-						</div>
-						<!-- next slide -->
-						<div class="testimonial">
-							<div class="row">
-								<div class="col-sm-8">
-									<div class="testimonial__name">Сеть магазинов «Мастер Сантехник», ИП Семенчук И.В.</div>
-									<div class="testimonial__desc">«Благодаря работе по продвижению на сайте в день присутствует более 200 человек, которые нашли нас через поисковую систему»</div>
-									<a href="#" class="btn btn--blue mt80">Смотреть все (15)</a>
-								</div>
-								<div class="col-sm-4">
-									<img src="images/testimonial-1.png" class="img-fluid" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- TESTIMONIALS: END -->
-
-	<!-- CAPTURE: END -->
-	<section class="capture">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="heading text-xs-center">Есть вопросы ?</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
-					<div class="hero__form">
-						<span>Оставьте Ваш телефон и мы свяжемся с Вами в ближайшее время</span>
-						<form action="">
-							<input type="text" name="phone" class="form-input" placeholder="+7 (356) 000 00 00">
-							<button type="submit" class="btn btn--green">Отправить заявку сейчас</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- CAPTURE: END -->
-
-	<!-- FOOTER: START -->
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4 col-md-3">
-					<img src="images/logo.png" class="img-fluid" alt="">
-					<div class="footer__copy">copyright 2016 Все права защищены </div>
-				</div>
-				<div class="col-sm-4 col-md-6">
-					<div class="footer__location">
-						<i class="ico ico--location"></i>
-						<span>6220021 Г. Нижний Тагил, ул. Балакинская 1а оф. 302</span>
-					</div>
-				</div>
-				<div class="col-sm-4 col-md-3">
-					<div class="footer__contacts">
-						<i class="ico ico--phone"></i>
-						<a href="tel:+78005744484">+ 7 800 574 44 84</a>
-					</div>
-					<div class="footer__contacts">
-						<i class="ico ico--skype"></i>
-						<a href="#">My skype here</a>
-					</div>
-					<div class="footer__contacts">
-						<i class="ico ico--email"></i>
-						<a href="mailto:exampleemail@gmail.com">exampleemail@gmail.com</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- FOOTER: END -->
-
+  <h1>Promosite .html content</h1>
+  <div class="links">
+  	<h2>Страницы</h2>
+  	<ul class="">
+  		<li><a href="mainpage.html" target="_blank">1. Главная</a></li>
+      <li><a href="contacts.html" target="_blank">2. Контакты</a></li>
+  	</ul>
+  </div>
 </body>
+
 </html>

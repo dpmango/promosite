@@ -78,7 +78,7 @@ $(document).ready(function(){
 
   // phone mask
   $("input[name=phone]").mask("+7 (999) 999-9999");
-  
+
  	// Prevent # errors
 	$('[href="#"]').click(function (e) {
 		e.preventDefault();
@@ -92,4 +92,21 @@ $(document).ready(function(){
         return false;
 	});
 
+  // Floating header
+  function headerFloat() {
+		if ($('.floater').is('.floater')) {
+			var winPos = $(window).scrollTop();
+
+			if (winPos > 150) {
+				$('.floater').addClass('active');
+			} else {
+				$('.floater').removeClass('active');
+			}
+		}
+	}
+	headerFloat();
+
+  $(window).scroll(function () {
+		headerFloat();
+	});
 });

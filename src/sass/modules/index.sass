@@ -39,8 +39,71 @@
 .hero__navi
   font-weight: 300
   font-size: 16px
+  text-transform: uppercase
   a
-    padding-right: 10px
+    padding-right: 14px
+    transition: all .4s ease
+.hero__navi-list
+  margin: 0
+  list-style: none
+  li
+    display: inline-block
+    position: relative
+    transition: all .4s ease
+    &:hover
+      a
+        text-decoration: underline
+      .hero__navi-list__sublevel
+        display: block
+
+.hero__navi-list__sublevel
+  display: none
+  list-style: none
+  font-weight: 300
+  position: absolute
+  z-index: 10
+  top: 45px
+  left: -90px
+  width: 310px
+  background: white
+  box-shadow: 0px 5px 13px rgba(black, .3)
+  border-radius: 6px
+  color: $fontColor
+  padding: 25px 35px
+  text-transform: none
+  li
+    display: inline-block
+    a
+      display: inline-block
+      padding: 3px 0
+      transition: all.4s ease
+      &:hover
+        color: $primary
+
+  .triangle-with-shadow
+  	position: absolute
+  	top: -20px
+  	z-index: 2
+  	left: 70px
+  	.ico-triangle
+  		position: relative
+  		overflow: hidden
+  		display: block
+  		width: 80px
+  		height: 20px
+  		&:after
+  			content: ' '
+  			display: inline-block
+  			width: 40px
+  			height: 40px
+  			background: white
+  			transform: rotate(45deg)
+        border-radius: 4px
+  			position: absolute
+  			top: 12px
+  			right: 5px
+  			box-shadow: -1px -1px 10px -2px rgba(black, 0.3)
+
 
 .hero__phone
   font-weight: 300
@@ -59,7 +122,7 @@
   display: block
   font-size: 14px
   text-decoration: underline
-  line-height: 1.2em
+  line-height: 1.1em
 
 
 .hero__title

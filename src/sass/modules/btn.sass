@@ -1,3 +1,8 @@
+.btn
+  outline: none
+  transition: none
+  &:focus, &:active, &:active:focus
+    outline: none
 
 .btn--green
   background: $green
@@ -7,11 +12,16 @@
   padding: 12px 40px
   margin-top: -1px
   border-bottom: 2px solid $greenDark
-  transition: all .4s ease
   &:hover
     color: white
-
+    transition: all .4s ease
+    background: linear-gradient(top, #8fe199, $green)
   &:focus, &:active
+    color: white
+    text-decoration: none
+    background: $green
+    transition: box-shadow .4s ease
+    box-shadow: inset 0px 3px 4px rgba(black, .3)
 
 .btn--blue
   background: $blue
@@ -22,9 +32,14 @@
   transition: all .4s ease
   &:hover
     color: white
-
+    transition: all .4s ease
+    background: linear-gradient(top, #78c4eb, $blue)
   &:focus, &:active
-
+    color: white
+    text-decoration: none
+    background: $green
+    transition: box-shadow .4s ease
+    box-shadow: inset 0px 3px 4px rgba(black, .3)
 
 .btn--outline
   background: transparent
@@ -32,7 +47,6 @@
   padding: 12px 40px
   margin-top: -1px
   border: 1px solid $primary
-  transition: all .4s ease
   margin-bottom: 10px
   &:hover
     color: white
@@ -46,10 +60,17 @@
   padding: 12px 40px
   margin-top: -1px
   border-bottom: 2px solid $primaryDark
-  transition: all .4s ease
   margin-bottom: 10px
   &:hover
     color: white
+    transition: all .4s ease
+    background: linear-gradient(top, #6acdb3, $primary)
+  &:focus, &:active
+    color: white
+    text-decoration: none
+    background: $green
+    transition: box-shadow .4s ease
+    box-shadow: inset 0px 3px 4px rgba(black, .3)
 
 .btn--block
   display: block
