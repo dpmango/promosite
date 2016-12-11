@@ -227,7 +227,11 @@
       margin-bottom: -10px
     @include mq($until: mobile)
       transform: scale(.65)
+      margin-left: -15px
       margin-bottom: -15px
+  .ico--hero-2
+    @include mq($until: mobile)
+      margin-left: -25px
   span
     font-size: 18px
     font-weight: 300
@@ -277,20 +281,60 @@
       font-size: 14px
 .services--inner
   .service__block
+    @include mq($until: mobile)
+      text-align: left
+      margin-bottom: -20px
     span
       font-size: 24px
       font-weight: 400
       line-height: 1.2em
+      @include mq($until: desktop)
+        font-size: 20px
+      @include mq($until: tablet)
+        font-size: 18px
+      @include mq($until: mobile)
+        font-size: 24px
     .ico
       transition: all .4s ease
+      @include mq($until: mobile)
+        margin-left: -15px
     &:hover
       .ico
-        transform: scale(1.1)
+        @include mq($until: hd)
+          transform: scale(1.1)
+        @include mq($until: desktop)
+          transform: scale(.95)
+          margin-bottom: -10px
+        @include mq($until: tablet)
+          transform: scale(.8)
+          margin-bottom: -15px
+        @include mq($until: mobile)
+          transform: scale(.7)
+
       .service__block__desc
-        opacity: 0
+        @include mq($from: mobile)
+          opacity: 0
   .service__block-hide
     padding-top: 250px
     padding-bottom: 40px
+    @include mq($until: mobile)
+      display: block
+      opacity: 1
+      position: relative
+      box-shadow: none
+      padding-top: 20px
+      left: 0
+      &::before
+        display: none
+      .btn
+        display: inline-block !important
+        width: 47%
+        margin: 0
+        &.btn--outline
+          padding-top: 10px
+          padding-bottom: 10px
+        &:first-child
+          margin-right: 3%
     &::before
       height: 170px
 
@@ -305,9 +349,12 @@
   transition: all .4s ease
   box-shadow: 0px 0px 13px rgba(black, .3)
   @include mq($until: mobile)
-    padding-top: 180px
+    padding-top: 200px
     left: -10px
     right: -10px
+  .btn
+    @include mq($until: mobile)
+      font-size: 14px
   &::before
     display: block
     content: ' '
@@ -339,6 +386,8 @@ $block4: #badf30
 .steps__desc
   position: relative
   margin: 60px 0 60px 0
+  @include mq($until: mobile)
+    margin: 20px 0 20px 0
   &.first
     margin-top: 27px
     &::after
@@ -384,6 +433,8 @@ $block4: #badf30
 .steps__desc-heading
   font-size: 30px
   display: inline-block
+  @include mq($until: mobile)
+    word-wrap: break-word
 
 .steps__desc-desc
   font-size: 16px
@@ -442,6 +493,10 @@ $block4: #badf30
 .steps__block--4:after
   background: $block4
 
+.step-icons-mobile
+  .col-xs-4 .ico
+    max-width: 100%
+    margin-top: 20px
 // CTA
 .cta__from
   margin-top: 80px
@@ -491,12 +546,18 @@ $block4: #badf30
 .portfolio__item
   text-align: center
   padding: 20px 0
+  @include mq($until: mobile)
+    padding: 20px 30px
   img
     transition: all .4s ease
   &:hover
     img
-      transform: scale(1.2)
-
+      @include mq($from: hd)
+        transform: scale(1.2)
+      @include mq($until: wide)
+        transform: scale(1.1)
+      @include mq($until: mobile)
+        transform: scale(1)
 .portfolio__item-hide
   opacity: 0
   position: absolute
@@ -508,6 +569,19 @@ $block4: #badf30
   padding-bottom: 50px
   transition: all .4s ease
   box-shadow: 0px 0px 13px rgba(black, .3)
+  @include mq($from: hd)
+    left: -30px
+    right: -30px
+  @include mq($until: wide)
+    padding-top: 300px
+  @include mq($until: desktop)
+    padding-top: 250px
+  @include mq($until: tablet)
+    padding-top: 200px
+  @include mq($until: mobile)
+    left: 15px
+    right: 15px
+    padding-top: 280px
   &::before
     display: block
     content: ' '
@@ -515,8 +589,12 @@ $block4: #badf30
     position: absolute
     bottom: 0
     z-index: 1
-    height: 130px
+    height: 150px
     width: 100%
+    @include mq($until: desktop)
+      height: 180px
+    @include mq($until: mobile)
+      height: 150px
   &:hover
     opacity: 1
     z-index: 9
@@ -526,6 +604,7 @@ $block4: #badf30
     z-index: 2
     width: auto
     margin: 0
+    margin-bottom: 10px
 
 //Testimonaial
 
@@ -591,6 +670,7 @@ $block4: #badf30
   margin-bottom: 30px
   a, span
     padding-left: 10px
+    display: inline-block
 .footer__location, .footer__contacts
   position: relative
   .ico
@@ -657,6 +737,12 @@ $block4: #badf30
   margin-bottom: 40px
   padding-left: 15px
   padding-right: 15px
+  @include mq($until: desktop)
+    padding-left: 10px
+    padding-right: 10px
+  @include mq($until: tablet)
+    padding-left: 0px
+    padding-right: 0px
   span
     text-align: center
     display: block
@@ -700,11 +786,19 @@ $block4: #badf30
   font-size: 40px
   line-height: 1.2em
   margin-bottom: 10px
+  @include mq($until: desktop)
+    font-size: 36px
+  @include mq($until: tablet)
+    font-size: 32px
+  @include mq($until: mobile)
+    font-size: 26px
 
 .info__block__content
   font-size: 16px
   line-height: 1.25em
   margin-bottom: 25px
+  @include mq($until: mobile)
+    font-size: 14px
 
 .info__more
   margin-top: 40px
@@ -712,6 +806,15 @@ $block4: #badf30
 
 .info__more__heading
   font-size: 40px
+  @include mq($until: desktop)
+    font-size: 36px
+  @include mq($until: tablet)
+    font-size: 32px
+    margin-bottom: 5px
+  @include mq($until: mobile)
+    font-size: 26px
+    margin-bottom: 10px
+
 .info__more__links
   font-size: 16px
   a

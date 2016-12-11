@@ -103,6 +103,8 @@ body
   padding: 40px 0 30px 0
   @include mq($until: desktop)
     padding: 30px 0 20px 0
+  @include mq($until: mobile)
+    position: relative
   &--inner
     position: relative
 
@@ -138,9 +140,10 @@ body
   background: $green
   color: white
   .hero__phone
-    margin-top: 0px
+    margin-top: 10px
   .hero__navi
     margin-top: 10px
+    margin-bottom: 10px
   &--blue
     background: $blue
   &--primary
@@ -155,6 +158,9 @@ body
   color: white
   @include mq($until: desktop)
     padding-top: 150px
+  @include mq($until: mobile)
+    padding-top: 60px
+    min-height: 600px
 
 .services
   padding-top: 80px
@@ -212,6 +218,10 @@ body
   font-size: 16px
   padding-top: 55px
   padding-bottom: 60px
+  @include mq($until: desktop)
+    font-size: 14px
+  @include mq($until: mobile)
+    font-size: 16px
 
 
 // INNER PAGES
@@ -225,3 +235,8 @@ body
       height: 140vh
 
 .testimonials-inner
+  @include mq($until: mobile)
+    margin-top: 30px
+.info
+  @include mq($until: mobile)
+    margin-top: 30px
