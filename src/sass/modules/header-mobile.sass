@@ -12,16 +12,10 @@
 	border: 0
 	margin: 0
 	overflow: visible
-	&:hover
-		.hamburger-inner
-			margin-top: -3px
-			&:before
-				top: -8px
-			&:after
-				top: -16px
+
 .hamburger-box
-	width: 21px
-	height: 16px
+	width: 45px
+	height: 0px
 	display: inline-block
 	position: relative
 
@@ -29,25 +23,25 @@
 	display: block
 	top: 50%
 	margin-top: -7px
-	width: 21px
-	height: 3px
-	background-color: white
-	border-radius: 0px
+	width: 45px
+	height: 6px
+	background-color: $green
+	border-radius: 4px
 	position: absolute
 	transition: all 0.15s ease
 	&:before, &:after
-		width: 21px
-		height: 3px
-		background-color: white
+		width: 45px
+		height: 6px
+		background-color: $green
 		position: absolute
 		transition: all 0.15s ease
 	&:before, &:after
 		content: ""
 		display: block
 	&:before
-		top: -6px
+		top: -10px
 	&:after
-		top: -12px
+		top: -20px
 .hamburger--collapse .hamburger-inner
 	top: auto
 	bottom: 0
@@ -62,34 +56,39 @@
 		top: 0
 		transform: rotate(-90deg)
 
-// HEADER MOBILE
-.header-mobile
-	padding-top: 10px
-	padding-bottom: 5px
-	background: $primary
-	@include mq($from: mobile)
-		display: none
-
-.header-logo-mobile
-	max-width: 100px
-	position: absolute
-	left: 50%
-	bottom: -70px
-	transform: translateX(-50%)
 
 .mobile-nav
 	display: none
-	font-family: 'Josefin Slab', serif
 	color: white
-	font-size: 20px
+	font-size: 18px
 	border-top: 1px solid #b9fced
 	background: $primary
 	@include mq($from: mobile)
 		display: none !important
-	a
-		display: block
-		border-bottom: 1px solid #b9fced
-		padding: 6px 15px
-		transition: all .4s ease
-		&:hover
-			background: rgba(white, .1)
+	.mobile-nav-list
+		list-style: none
+		margin: 0
+		padding: 20px 0
+		li
+			margin: 0
+			display: block
+		a
+			display: block
+			border-bottom: 1px solid #b9fced
+			padding: 6px 15px
+			transition: all .4s ease
+			&:hover
+				background: rgba(white, .1)
+			&:active, &:focus
+				text-decoration: none
+				color: white
+	.mobile-nav-sublvl
+		display: none
+		font-size: 16px
+		padding-left: 20px
+		list-style: circle
+		background: rgba(white, .1)
+		&.active
+			display: block
+		a
+			border-bottom: none

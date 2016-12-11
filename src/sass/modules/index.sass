@@ -14,25 +14,38 @@
 
 .header__brief
   position: relative
+  @include mq($until: mobile)
+    margin-top: -10px
   .ico
     position: absolute
     left: 0
     top: 0
+    @include mq($until: mobile)
+      transform: scale(.65)
+      margin-left: -10px
+      margin-top: -8px
   span
     padding-left: 70px
     display: inline-block
     font-weight: 300
     line-height: 1.2em
+    @include mq($until: mobile)
+      padding-left: 50px
   &:hover
     opacity: .8
 
 .header__brief-name
   font-size: 24px
   padding-top: 3px
+  @include mq($until: mobile)
+    font-size: 18px
 
 .header__brief-action
   font-size: 16px
   padding-top: 5px
+  @include mq($until: mobile)
+    font-size: 12px
+    padding-top: 0
 
 
 //hero
@@ -197,8 +210,9 @@
     z-index: 1
     height: 130px
     width: 100%
-  // &:hover
-  //   opacity: 1
+  &:hover
+    opacity: 1
+    z-index: 9
   .btn
     margin-left: 20px
     margin-right: 20px
@@ -370,3 +384,45 @@ $block4: #badf30
   margin-bottom: 20px
   a, span
     padding-left: 10px
+
+
+
+// INNER PAGES
+
+.map__contacts
+  background: white
+  box-shadow: 0 4px 15px rgba(black, .3)
+  padding: 45px 30px
+  border-radius: 4px
+  position: absolute
+  top: -80vh
+  @include mq($until: mobile)
+    top: -500px
+
+.map__contacts-row
+  position: relative
+  margin-bottom: 35px
+  &:first-child
+    margin-bottom: 25px
+  .ico
+    position: absolute
+    top: 0
+    left: 0
+    vertical-align: 0
+    &.ico--phone
+      top: -10px
+    &.ico--skype
+      top: -10px
+    &.ico--email
+      top: -5px
+
+  a, span
+    display: inline-block
+    padding-left: 60px
+
+.map__contacts-form
+  margin-top: 30px
+  input
+    margin-top: 5px
+  .btn
+    margin-top: 10px

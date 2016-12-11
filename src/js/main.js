@@ -1,18 +1,26 @@
 $(document).ready(function(){
 
-  // Hamburger icon
-  var helper_click = 1
-	// вызов помошника
-	$('#helper--toggle').click(function(e){
-		if (helper_click == 1) {
-			$('#show-helper, #helper__step-1').show();
-			$('.calculator__wrapper, header').addClass('need-help');
-			$('#calc__select-location--toggle').trigger('click');
-			helper_click++
-		} else {
-			$('#show-helper, #helper__step-1').hide();
-			$('.calculator__wrapper, header').removeClass('need-help');
-			helper_click--
+  // hamburger
+  var click = 1;
+
+  $("#show-me-menu").on("click", clickHamb);
+
+  function clickHamb() {
+      if ( click == 1 ) {
+          $(this).addClass('is-active');
+          $('.mobile-nav').slideToggle(300);
+          click = 2;
+      } else {
+      $(this).removeClass('is-active');
+      $('.mobile-nav').hide();
+          click = 1;
+      }
+  }
+
+  $('.mobile-nav-list > li > a').click(function(e){
+		if($(this).closest("li").children("ul").length) {
+			e.preventDefault();
+			$(this).closest('li').find('ul').toggleClass('active');
 		}
 	});
 
@@ -64,17 +72,17 @@ $(document).ready(function(){
 	});
 
 
-  // Services hover
-  $('.service__block').hover(function(){
-    if( $(this).closest('.row').data('hover') == "on" ){
-      $(this).find('.service__block-hide').css('opacity', '1');
-      $('.service__block-hide').hover(function(){
-        $(this).css('opacity', '1');
-      });
-    }
-  }, function(){
-    $(this).find('.service__block-hide').css('opacity', '0');
-  });
+  // // Services hover
+  // $('.service__block').hover(function(){
+  //   if( $(this).closest('.row').data('hover') == "on" ){
+  //     $(this).find('.service__block-hide').css('opacity', '1');
+  //     $('.service__block-hide').hover(function(){
+  //       $(this).css('opacity', '1');
+  //     });
+  //   }
+  // }, function(){
+  //   $(this).find('.service__block-hide').css('opacity', '0');
+  // });
 
   // phone mask
   $("input[name=phone]").mask("+7 (999) 999-9999");

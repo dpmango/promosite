@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="/css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="/css/style.css" type="text/css" />
 	<!-- endbuild -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
 	<!--build:js js/main.min.js -->
 	<script src="/js/lib/jquery-1.11.min.js"></script>
 	<script src="/js/lib/tether.min.js"></script>
@@ -33,18 +34,25 @@
 	<header class="header header--inner">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4">
+        <div class="col-xs-2 hidden-sm-up">
+          <button class="hamburger hamburger--collapse" type="button" id="show-me-menu">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+        </div>
+				<div class="col-xs-6 col-sm-4">
 					<a href="#">
 						<img src="images/logo.png" class="img-fluid" alt="">
 					</a>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-6 hidden-xs-down">
 					<div class="header__slogan">
 						Умножаем продажи!
 						<span>Приводим новых клиентов в Ваш бизнес</span>
 					</div>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-xs-4 col-sm-2">
 					<div class="header__brief">
 						<a href="#">
 							<i class="ico ico--brief"></i>
@@ -56,10 +64,31 @@
 			</div>
 		</div>
 	</header>
+  <section class="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Услуги</a>
+        <ul class="mobile-nav-sublvl">
+          <li><a href="#">Разработка сайта визитки</a></li>
+          <li><a href="#">Разработка интернет-магазина</a></li>
+          <li><a href="#">Разработка лендинг пейжд</a></li>
+          <li><a href="#">Разработка лендинг-магазина</a></li>
+          <li><a href="#">Разработка корпоративного сайта</a></li>
+          <li><a href="#">Поддержка сайтов</a></li>
+          <li><a href="#">Продвижение сайтов</a></li>
+          <li><a href="#">Рекламная кампания</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Портфолио</a></li>
+      <li><a href="#">Отзывы</a></li>
+      <li><a href="#">Полезная информация</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+	</section>
 	<!-- HEADER: END -->
 
 	<!-- NAVI: START -->
-	<div class="inner-navi">
+	<div class="inner-navi hidden-sm-down">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8">
@@ -101,11 +130,69 @@
 	<!-- NAVI: END -->
 
 	<!-- CONTACTS: START -->
-  <section class="contacts">
+  <section class="title">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="heading text-xs-center">Контакты</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="map">
+    <div id="map"></div>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap,
+            myPlacemark;
+
+        function init(){
+            myMap = new ymaps.Map("map", {
+                center: [57.941, 59.8936],
+                zoom: 12,
+                controls: ["zoomControl"]
+            });
+
+            myPlacemark = new ymaps.Placemark([57.936485, 59.993465], {
+                hintContent: 'Promosite!',
+                balloonContent: '6220021 Г. Нижний Тагил, ул. Балакинская 1а оф. 302'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-10 col-sm-4 offset-xs-1">
+          <div class="map__contacts">
+            <div class="map__contacts-row">
+  						<i class="ico ico--location"></i>
+  						<span>6220021 Г. Нижний Тагил, ул. Балакинская 1а оф. 302</span>
+  					</div>
+            <div class="map__contacts-row">
+  						<i class="ico ico--phone"></i>
+  						<a href="tel:+78005744484">+ 7 800 574 44 84</a>
+  					</div>
+  					<div class="map__contacts-row">
+  						<i class="ico ico--skype"></i>
+  						<a href="#">My skype here</a>
+  					</div>
+  					<div class="map__contacts-row">
+  						<i class="ico ico--email"></i>
+  						<a href="mailto:exampleemail@gmail.com">exampleemail@gmail.com</a>
+  					</div>
+            <div class="map__contacts-form">
+              <span>Оставьте Ваш телефон и мы свяжемся с Вами в ближайшее время</span>
+              <div class="row">
+                <div class="col-sm-9">
+                  <form action="">
+                    <input type="text" name="phone" class="form-input form-input--block" placeholder="+7 (356) 000 00 00">
+                    <button type="submit" class="btn btn--green btn--block">Заказать консультацию</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -117,7 +204,7 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4 col-md-3">
+				<div class="col-sm-4 col-md-3 hidden-xs-down">
 					<img src="images/logo.png" class="img-fluid" alt="">
 					<div class="footer__copy">copyright 2016 Все права защищены </div>
 				</div>
@@ -141,6 +228,10 @@
 						<a href="mailto:exampleemail@gmail.com">exampleemail@gmail.com</a>
 					</div>
 				</div>
+        <div class="col-xs-12 hidden-sm-up">
+          <img src="images/logo.png" class="img-fluid" alt="">
+          <div class="footer__copy">copyright 2016 Все права защищены </div>
+        </div>
 			</div>
 		</div>
 	</footer>
