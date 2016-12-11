@@ -47,9 +47,28 @@
   margin-top: -1px
   border: 1px solid $primary
   margin-bottom: 10px
+  transition: all .4s ease
   &:hover
     color: white
     background: $primary
+  &--green
+    border-color: $green
+    &:hover
+      background: $green
+    &:focus, &:active
+      background: $green !important
+  &--blue
+    border-color: $blue
+    &:hover
+      background: $blue
+    &:focus, &:active
+      background: $blue !important
+  &:focus, &:active
+    color: white
+    text-decoration: none
+    background: $primary
+    transition: box-shadow .4s ease
+    box-shadow: inset 0px 3px 4px rgba(black, .3)
 
 .btn--main
   background: $primary
@@ -79,3 +98,10 @@
 
 .btn--gap
   margin-top: 40px
+
+.btn--long-pad
+  padding-left: 90px
+  padding-right: 90px
+  @include mq($until: desktop)
+    padding-left: 45px
+    padding-right: 45px

@@ -4,14 +4,25 @@
   display: inline-block
   content: ' '
 
-a
+a, button
   color: inherit
   &:hover
     text-decoration: none
     color: inherit
+  &:focus
+    outline: none
+    outline-offset: 0px
+    color: inherit
+  &:visited
+    color: inherit
 
 label
   font-size: 16px
+
+input:focus, input:active
+  outline: none
+  border-color: $primary
+  box-shadow: 0px 0px 6px rgba($primary, .3)
 
 .color--gray
   color: $borderColor
@@ -32,6 +43,10 @@ label
 .mt80
   margin-top: 80px
 
+.z50
+  position: relative
+  z-index: 50
+
 .heading
   font-size: 60px
   line-height: 1.2em
@@ -45,7 +60,7 @@ label
 // Layout
 body
   font-size: 14px
-  font-family: "Helvetica"
+  font-family: "Helvetica Neue"
   color: #333333
   overflow-x: hidden
 
@@ -102,6 +117,8 @@ body
     margin-top: 10px
   &--blue
     background: $blue
+  &--primary
+    background: $primary
 
 .hero
   height: 100vh
@@ -166,4 +183,3 @@ body
       height: 140vh
 
 .testimonials-inner
-  

@@ -44,7 +44,7 @@ gulp.task('build', function (callback) {
 /////
 
 var processors = [
-    autoprefixer({browsers: ['> 1%', 'last 2 versions', 'IE 8']}),
+    autoprefixer({browsers: ['> 1%', 'last 5 versions', 'IE 8']}),
     cssnano(),
 ];
 
