@@ -117,4 +117,17 @@ $(document).ready(function(){
   $(window).scroll(function () {
 		headerFloat();
 	});
+
+  // wow
+  wow = new WOW(
+  {
+  boxClass:     'wow',      // default
+  animateClass: 'animated', // default
+  offset:       0,          // default
+  mobile:       false,       // default
+  live:         true        // default
+  }
+  )
+  wow.init();
+
 });

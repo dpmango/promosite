@@ -1,19 +1,30 @@
 // HEADER
 .header__logo
-  height: 30px
+  @include mq($until: mobile)
+    text-align: center
+  img
+    @include mq($until: mobile)
+      width: 260px
 
 .header__slogan
   font-size: 36px
   line-height: 1.1em
   padding-top: 7px
+  @include mq($until: desktop)
+    font-size: 28px
   span
     display: block
     font-size: 18px
     font-weight: 300
     margin-top: -12px
+    @include mq($until: desktop)
+      font-size: 15px
+      line-height: 1.2em
+      padding-top: 10px
 
 .header__brief
   position: relative
+  display: inline-block
   @include mq($until: mobile)
     margin-top: -10px
   .ico
@@ -26,7 +37,7 @@
       margin-top: -8px
   span
     padding-left: 70px
-    display: inline-block
+    display: block
     font-weight: 300
     line-height: 1.2em
     @include mq($until: mobile)
@@ -53,9 +64,13 @@
   font-weight: 300
   font-size: 16px
   text-transform: uppercase
+  @include mq($until: bp1030)
+    font-size: 14px
   a
-    padding: 15px 14px 15px 0
+    padding: 10px 14px 10px 0
     transition: all .4s ease
+    display: inline-block
+
 .hero__navi-list
   margin: 0
   list-style: none
@@ -120,23 +135,28 @@
 
 .hero__phone
   font-weight: 300
-  margin-top: -15px
+  margin-top: -3px
 
 .hero__phone-wrapper
   padding-left: 10px
   display: inline-block
+  @include mq($until: bp1030)
+    padding-left: 5px
 
 .hero__phone-number
   font-size: 24px
   display: inline-block
   line-height: 1em
+  @include mq($until: bp1030)
+    font-size: 20px
 
 .hero__phone-callback
   display: block
   font-size: 14px
   text-decoration: underline
   line-height: 1.1em
-
+  @include mq($until: bp1030)
+    font-size: 12px
 
 .hero__title
   margin-top: 10vh
@@ -145,20 +165,46 @@
   font-weight: 600
   line-height: 1em
   text-align: center
+  @include mq($until: desktop)
+    font-size: 46px
+  @include mq($until: tablet)
+    font-size: 40px
+  @include mq($until: mobile)
+    font-size: 36px
   span
     font-weight: 300
     font-size: 45px
     letter-spacing: 7px
     display: block
+    @include mq($until: desktop)
+      font-size: 40px
+    @include mq($until: tablet)
+      font-size: 36px
+      letter-spacing: 5px
+    @include mq($until: mobile)
+      font-size: 31px
+      letter-spacing: 3px
+
 
 .hero__form
   font-size: 16px
   margin: 0 auto
   display: inline-block
   margin-top: 40px
+  text-align: left
   span
     margin-bottom: 5px
     display: inline-block
+    @include mq($until: desktop)
+      font-size: 14px
+  .form-input
+    @include mq($until: desktop)
+      display: block
+      width: 100%
+  button
+    @include mq($until: desktop)
+      display: block
+      width: 100%
 
 .form-input
   background: white
@@ -167,6 +213,7 @@
   margin-right: 15px
   border-radius: 4px
   display: inline-block
+  margin-bottom: 10px
   &--block
     display: block
     width: 100%
@@ -174,9 +221,23 @@
 .hero__icons
   text-align: center
   margin-top: 10vh
+  .ico
+    @include mq($until: desktop)
+      transform: scale(.8)
+      margin-bottom: -10px
+    @include mq($until: mobile)
+      transform: scale(.65)
+      margin-bottom: -15px
   span
     font-size: 18px
     font-weight: 300
+    display: block
+    @include mq($until: desktop)
+      font-size: 16px
+
+    @include mq($until: mobile)
+      margin-bottom: 15px
+      font-size: 14px
 
 
 // services
@@ -185,8 +246,18 @@
   position: relative
   padding: 20px 0
   border-radius: 5px
+  @include mq($until: mobile)
+    padding: 10px 0
+    margin-top: -15px
+    min-height: 200px
   .ico
     position: relative
+    @include mq($until: desktop)
+      transform: scale(.85)
+      margin-bottom: -10px
+    @include mq($until: tablet)
+      transform: scale(.7)
+      margin-bottom: -15px
   span
     font-size: 16px
     font-weight: 300
@@ -194,13 +265,16 @@
     margin-top: 5px
     position: relative
     z-index: 9
+    @include mq($until: tablet)
+      font-size: 14px
   .service__block__desc
     font-size: 16px
     margin-top: 10px
     text-align: left
     line-height: 1.2em
     font-weight: 300
-
+    @include mq($until: tablet)
+      font-size: 14px
 .services--inner
   .service__block
     span
@@ -230,6 +304,10 @@
   padding-top: 220px
   transition: all .4s ease
   box-shadow: 0px 0px 13px rgba(black, .3)
+  @include mq($until: mobile)
+    padding-top: 180px
+    left: -10px
+    right: -10px
   &::before
     display: block
     content: ' '
@@ -239,6 +317,8 @@
     z-index: 1
     height: 130px
     width: 100%
+    @include mq($until: mobile)
+      height: 100px
   &:hover
     opacity: 1
     z-index: 9
@@ -250,14 +330,51 @@
     width: auto
 
 
+$block1: #37a7e2
+$block2: #6fd87b
+$block3: #26b690
+$block4: #badf30
+
 //steps
 .steps__desc
   position: relative
   margin: 60px 0 60px 0
+  &.first
+    margin-top: 27px
+    &::after
+      background: $block1
+  &.second
+    margin-top: 160px
+    &::after
+      background: $block2
+      left: -50%
+      width: 55%
+      top: 39px
+  &.third
+    margin-top: 135px
+    &::after
+      background: $block3
+  &.fourth
+    margin-top: 117px
+    .steps__desc-numbs
+      top: -10px
+    &::after
+      background: $block4
+      left: -50%
+      width: 55%
+      top: 39px
+  &::after
+    display: block
+    position: absolute
+    left: 20px
+    top: 40px
+    width: 150%
+    height: 2px
+    content: ' '
 .steps__desc-numbs
   display: inline-block
   position: absolute
-  top: 0
+  top: -22px
   left: 0
 
 .steps__desc__text
@@ -271,16 +388,14 @@
 .steps__desc-desc
   font-size: 16px
   line-height: 1.2em
-
-$block1: #37a7e2
-$block2: #6fd87b
-$block3: #26b690
-$block4: #badf30
+  margin-top: 10px
 
 .ico-step-num
   font-size: 72px
   font-style: normal
   display: inline-block
+  position: relative
+  line-height: 1em
 
 .ico-step-num-1
   color: $block1
@@ -330,8 +445,15 @@ $block4: #badf30
 // CTA
 .cta__from
   margin-top: 80px
+  @include mq($until: desktop)
+    margin-top: 60px
+  @include mq($until: tablet)
+    margin-top: 40px
+
 .cta__from-heading
   font-size: 16px
+  @include mq($until: tablet)
+    font-size: 14px
 
 .cta__form-label
   margin-top: 10px
@@ -352,11 +474,18 @@ $block4: #badf30
   font-size: 36px
   text-transform: uppercase
   line-height: 1.2em
+  @include mq($until: wide)
+    font-size: 32px
+  @include mq($until: desktop)
+    font-size: 28px
+  @include mq($until: tablet)
+    font-size: 22px
 
 .cta__services-desc
   font-size: 16px
   line-height: 1.2em
-
+  @include mq($until: desktop)
+    font-size: 14px
 
 // Portfolio
 .portfolio__item
@@ -401,54 +530,87 @@ $block4: #badf30
 //Testimonaial
 
 #owl-testimonials
+  .owl-next, .owl-prev
+    font-size: 0
+    width: 22px
+    height: 40px
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
   .owl-next
-    font-size: 0
     background: url('../images/sprite.png') no-repeat -25px -1045px
-    width: 22px
-    height: 40px
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
     right: -7%
+    @include mq($until: mobile)
+      right: 10px
   .owl-prev
-    font-size: 0
     background: url('../images/sprite.png') no-repeat 0 -1045px
-    width: 22px
-    height: 40px
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
     left: -7%
+    @include mq($until: mobile)
+      left: 10px
 .testimonial
   box-shadow: 0px 0px 13px rgba(black, .3)
   padding: 50px 8.33333%
   margin: 15px 0
+  @include mq($until: mobile)
+    padding-left: 50px
+    padding-right: 50px
+  .mt80
+    @include mq($until: mobile)
+      margin-top: 40px
 .testimonial__name
   font-size: 30px
   font-weight: 300
   line-height: 1.2em
+  @include mq($until: tablet)
+    font-size: 26px
+  @include mq($until: mobile)
+    font-size: 24px
 
 .testimonial__desc
   font-size: 16px
   font-weight: 300
   margin-top: 20px
-
+  @include mq($until: mobile)
+    font-size: 14px
+    line-height: 1.2em
 
 // footer
 .footer__copy
   color: #777
   margin-top: 45px
+  @include mq($from: mobile)
+    width: 200%
 .footer__location
   margin-top: 25px
+  @include mq($until: mobile)
+    margin-bottom: 20px
   span
     padding-left: 10px
     display: inline-block
 .footer__contacts
-  margin-bottom: 20px
+  margin-bottom: 30px
   a, span
     padding-left: 10px
+.footer__location, .footer__contacts
+  position: relative
+  .ico
+    position: absolute
+    top: 0
+    left: 0
+    &.ico--phone
+      top: -10px
+    &.ico--skype
+      top: -10px
+    &.ico--email
+      top: -5px
+  a, span
+    padding-left: 50px
 
-
+.footer
+  .hidden-sm-up
+    @include mq($until: mobile)
+      text-align: center
+      margin-top: 20px
 
 // INNER PAGES
 

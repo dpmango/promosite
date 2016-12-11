@@ -18,18 +18,25 @@
 	<header class="header">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4">
+        <div class="col-xs-2 hidden-sm-up">
+          <button class="hamburger hamburger--collapse" type="button" id="show-me-menu">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+        </div>
+				<div class="col-xs-6 col-sm-7 col-md-4 header__logo">
 					<a href="#">
 						<img src="images/logo.png" class="img-fluid" alt="">
 					</a>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-5 col-lg-6 hidden-sm-down">
 					<div class="header__slogan">
 						Умножаем продажи!
 						<span>Приводим новых клиентов в Ваш бизнес</span>
 					</div>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-xs-4 col-sm-5 col-md-3 col-lg-2">
 					<div class="header__brief">
 						<a href="#">
 							<i class="ico ico--brief"></i>
@@ -41,13 +48,34 @@
 			</div>
 		</div>
 	</header>
+  <section class="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Услуги</a>
+        <ul class="mobile-nav-sublvl">
+          <li><a href="#">Разработка сайта визитки</a></li>
+          <li><a href="#">Разработка интернет-магазина</a></li>
+          <li><a href="#">Разработка лендинг пейжд</a></li>
+          <li><a href="#">Разработка лендинг-магазина</a></li>
+          <li><a href="#">Разработка корпоративного сайта</a></li>
+          <li><a href="#">Поддержка сайтов</a></li>
+          <li><a href="#">Продвижение сайтов</a></li>
+          <li><a href="#">Рекламная кампания</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Портфолио</a></li>
+      <li><a href="#">Отзывы</a></li>
+      <li><a href="#">Полезная информация</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+	</section>
 	<!-- HEADER: END -->
 
 	<!-- NAVI: START -->
 	<navi class="floater">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-8 col-lg-9">
 					<div class="hero__navi">
 						<ul class="hero__navi-list">
 							<li><a href="#">Главная</a></li>
@@ -71,7 +99,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-sm-4 text-sm-right">
+				<div class="col-sm-4 col-lg-3 text-sm-right">
 					<div class="hero__phone">
 						<i class="ico ico--hero-phone"></i>
 						<div class="hero__phone-wrapper">
@@ -88,8 +116,8 @@
 	<!-- HERO: START -->
 	<section class="hero">
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-8">
+			<div class="row hidden-xs-down">
+				<div class="col-sm-8 col-lg-9">
 					<div class="hero__navi">
 						<ul class="hero__navi-list">
 							<li><a href="#">Главная</a></li>
@@ -113,7 +141,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-sm-4 text-sm-right">
+				<div class="col-sm-4 col-lg-3 text-sm-right">
 					<div class="hero__phone">
 						<i class="ico ico--hero-phone"></i>
 						<div class="hero__phone-wrapper">
@@ -130,25 +158,27 @@
 						<span>приносящие прибыль</span>
 					</div>
 					<div class="row">
-						<div class="col-md-6 offset-md-3">
-							<div class="hero__form">
-								<span>Оставьте Ваш телефон и мы свяжемся с Вами в ближайшее время</span>
-								<form action="">
-									<input type="text" name="phone" class="form-input" placeholder="+7 (356) 000 00 00">
-									<button type="submit" class="btn btn--green">Отправить заявку сейчас</button>
-								</form>
+						<div class="col-xs-10 offset-xs-1 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+							<div class="text-xs-center pos-r">
+								<div class="hero__form">
+									<span>Оставьте Ваш телефон и мы свяжемся с Вами в ближайшее время</span>
+									<form action="">
+										<input type="text" name="phone" class="form-input" placeholder="+7 (356) 000 00 00">
+										<button type="submit" class="btn btn--green">Отправить заявку сейчас</button>
+									</form>
+								</div>
 							</div>
 							<div class="hero__icons">
 								<div class="row">
-									<div class="col-sm-4">
+									<div class="col-xs-4">
 										<i class="ico ico--hero-1"></i>
 										<span>Быстрые сроки</span>
 									</div>
-									<div class="col-sm-4">
+									<div class="col-xs-4">
 										<i class="ico ico--hero-2"></i>
 										<span>Разумные цены</span>
 									</div>
-									<div class="col-sm-4">
+									<div class="col-xs-4">
 										<i class="ico ico--hero-3"></i>
 										<span>Высокое качество</span>
 									</div>
@@ -171,8 +201,8 @@
 				</div>
 			</div>
 			<div class="row" data-hover="on">
-				<div class="col-sm-3">
-					<div class="service__block">
+				<div class="col-xs-6 col-sm-3">
+					<div class="service__block wow bounceIn" data-wow-delay="0.5s">
 						<i class="ico ico--service-1"></i>
 						<span>Разработка сайта визитки</span>
 						<div class="service__block-hide">
@@ -182,8 +212,8 @@
 					</div>
 				</div>
 				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
+				<div class="col-xs-6 col-sm-3">
+					<div class="service__block wow bounceIn" data-wow-delay="0.75s">
 						<i class="ico ico--service-2"></i>
 						<span>Разработка интернет-магазина</span>
 						<div class="service__block-hide">
@@ -193,8 +223,8 @@
 					</div>
 				</div>
 				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
+				<div class="col-xs-6 col-sm-3">
+					<div class="service__block wow bounceIn" data-wow-delay="1s">
 						<i class="ico ico--service-3"></i>
 						<span>Разработка лендинг пейдж</span>
 						<div class="service__block-hide">
@@ -204,8 +234,8 @@
 					</div>
 				</div>
 				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
+				<div class="col-xs-6 col-sm-3">
+					<div class="service__block wow bounceIn" data-wow-delay="1.25s">
 						<i class="ico ico--service-4"></i>
 						<span>Разработка лендинг магазина</span>
 						<div class="service__block-hide">
@@ -217,8 +247,8 @@
 			</div>
 			<div class="row pt15" data-hover="0">
 				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
+				<div class="col-xs-6 col-sm-3">
+					<div class="service__block wow bounceIn" data-wow-delay="1.5s">
 						<i class="ico ico--service-5"></i>
 						<span>Разработка корпоративного сайта</span>
 						<div class="service__block-hide">
@@ -228,8 +258,8 @@
 					</div>
 				</div>
 				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
+				<div class="col-xs-6 col-sm-3">
+					<div class="service__block wow bounceIn" data-wow-delay="1.75s">
 						<i class="ico ico--service-6"></i>
 						<span>Поддержка сайтов</span>
 						<div class="service__block-hide">
@@ -239,8 +269,8 @@
 					</div>
 				</div>
 				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
+				<div class="col-xs-6 col-sm-3">
+					<div class="service__block wow bounceIn" data-wow-delay="2s">
 						<i class="ico ico--service-7"></i>
 						<span>Продвижение сайтов</span>
 						<div class="service__block-hide">
@@ -250,8 +280,8 @@
 					</div>
 				</div>
 				<!-- next -->
-				<div class="col-sm-3">
-					<div class="service__block">
+				<div class="col-xs-6 col-sm-3">
+					<div class="service__block wow bounceIn" data-wow-delay="2.25s">
 						<i class="ico ico--service-8"></i>
 						<span>Рекламная компания</span>
 						<div class="service__block-hide">
@@ -274,9 +304,9 @@
 					<div class="heading text-xs-center">Создание сайта от 8 до 28 дней</div>
 				</div>
 			</div>
-			<div class="row mt50">
+			<div class="row mt80 hidden-xs-down">
 				<div class="col-sm-4">
-					<div class="steps__desc">
+					<div class="steps__desc first">
 						<div class="steps__desc-numbs">
 							<i class="ico ico-step-num ico-step-num-1">1</i>
 						</div>
@@ -289,7 +319,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="steps__desc">
+					<div class="steps__desc third">
 						<div class="steps__desc-numbs">
 							<i class="ico ico-step-num ico-step-num-3">3</i>
 						</div>
@@ -321,7 +351,7 @@
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<div class="steps__desc">
+					<div class="steps__desc second">
 						<div class="steps__desc-numbs">
 							<i class="ico ico-step-num ico-step-num-2">2</i>
 						</div>
@@ -334,7 +364,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="steps__desc">
+					<div class="steps__desc fourth">
 						<div class="steps__desc-numbs">
 							<i class="ico ico-step-num ico-step-num-4">4</i>
 						</div>
@@ -344,6 +374,65 @@
 							</div>
 							<div class="steps__desc-desc">
 								Выставляем счет на оплату сайта. Устанавливаем на хостинг и cms, тестируем повторно
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mt50 hidden-sm-up">
+				<div class="col-sm-4">
+					<div class="steps__desc 1">
+						<div class="steps__desc-numbs">
+							<i class="ico ico-step-num ico-step-num-1">1</i>
+						</div>
+						<div class="steps__desc__text">
+							<div class="steps__desc-heading">
+								Подготовка
+							</div>
+							<div class="steps__desc-desc">
+								Заполняем бриф, уточняем все тонкости и моменты при разработке дизайна, создании сайта, подписываем договор, выставляем счет на предоплату
+							</div>
+						</div>
+					</div>
+					<div class="steps__desc 3">
+						<div class="steps__desc-numbs">
+							<i class="ico ico-step-num ico-step-num-3">3</i>
+						</div>
+						<div class="steps__desc__text">
+							<div class="steps__desc-heading">
+								Программирование
+							</div>
+							<div class="steps__desc-desc">
+								Воплощаем дизайн в код. Наша команда программистов создаст в короткие сроки качественный код для вашего сайта. Результат вы сможете протестировать перед оплатой
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="steps__desc 2">
+						<div class="steps__desc-numbs">
+							<i class="ico ico-step-num ico-step-num-2">2</i>
+						</div>
+						<div class="steps__desc__text">
+							<div class="steps__desc-heading">
+								Дизайн
+							</div>
+							<div class="steps__desc-desc">
+								Мы создаем уникальный дизайн веб-страниц. Разрабатываем яркие сайты, которые отличаются своим первоклассным дизайном и хорошей узнаваемостью. Согласовываем с заказчиком макет сайта
+							</div>
+						</div>
+					</div>
+					<div class="steps__desc 4">
+						<div class="steps__desc-numbs">
+							<i class="ico ico-step-num ico-step-num-4">4</i>
+						</div>
+						<div class="steps__desc__text">
+							<div class="steps__desc-heading">
+								Сдача проекта
+							</div>
+							<div class="steps__desc-desc">
+								Выставляем счет на оплату сайта. Устанавливаем на хостинг и cms, тестируем повторно
+							</div>
 						</div>
 					</div>
 				</div>
@@ -359,7 +448,7 @@
 				<div class="col-sm-12">
 					<div class="row">
 						<div class="col-sm-6 col-md-4 no-pad offset-md-1">
-							<div class="heading">Заказать сайт</div>
+							<div class="heading text-xs-center">Заказать сайт</div>
 							<div class="cta__from">
 								<div class="cta__from-heading">
 									Оставьте Ваш телефон и мы свяжемся с Вами в ближайшее время
@@ -378,7 +467,7 @@
 
 							</div>
 						</div>
-						<div class="col-sm-6 col-md-4 offset-md-1">
+						<div class="col-sm-6 col-md-4 offset-md-1 hidden-xs-down">
 							<div class="cta__services">
 								<div class="cta__services-name">Сайт визитка</div>
 								<div class="cta__services-desc">Сайт визитка состоит из система управления сайтом, домен и хостинг в подарок, карта сайта, онлайн консультант и другие модули</div>
@@ -415,38 +504,62 @@
 				<div class="col-sm-4">
 					<div class="portfolio__item">
 						<img src="images/portfolio-1.png" class="img-fluid">
+						<div class="portfolio__item-hide">
+							<a href="#" class="btn btn--outline btn--outline--green">Посмотреть сайт</a>
+							<a href="#modal-order" class="btn btn--green popup-with-zoom-anim">Заказать сайт</a>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="portfolio__item">
 						<img src="images/portfolio-2.png" class="img-fluid">
+						<div class="portfolio__item-hide">
+							<a href="#" class="btn btn--outline btn--outline--green">Посмотреть сайт</a>
+							<a href="#modal-order" class="btn btn--green popup-with-zoom-anim">Заказать сайт</a>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="portfolio__item">
 						<img src="images/portfolio-3.png" class="img-fluid">
+						<div class="portfolio__item-hide">
+							<a href="#" class="btn btn--outline btn--outline--green">Посмотреть сайт</a>
+							<a href="#modal-order" class="btn btn--green popup-with-zoom-anim">Заказать сайт</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row hidden-xs-down">
 				<!-- next row -->
 				<div class="col-sm-4">
 					<div class="portfolio__item">
 						<img src="images/portfolio-4.png" class="img-fluid">
+						<div class="portfolio__item-hide">
+							<a href="#" class="btn btn--outline btn--outline--green">Посмотреть сайт</a>
+							<a href="#modal-order" class="btn btn--green popup-with-zoom-anim">Заказать сайт</a>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="portfolio__item">
 						<img src="images/portfolio-5.png" class="img-fluid">
+						<div class="portfolio__item-hide">
+							<a href="#" class="btn btn--outline btn--outline--green">Посмотреть сайт</a>
+							<a href="#modal-order" class="btn btn--green popup-with-zoom-anim">Заказать сайт</a>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="portfolio__item">
 						<img src="images/portfolio-6.png" class="img-fluid">
+						<div class="portfolio__item-hide">
+							<a href="#" class="btn btn--outline btn--outline--green">Посмотреть сайт</a>
+							<a href="#modal-order" class="btn btn--green popup-with-zoom-anim">Заказать сайт</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row hidden-xs-down">
 				<!-- next row -->
 				<div class="col-sm-4">
 					<div class="portfolio__item">
@@ -493,7 +606,7 @@
 									<div class="testimonial__desc">«Благодаря работе по продвижению на сайте в день присутствует более 200 человек, которые нашли нас через поисковую систему»</div>
 									<a href="#" class="btn btn--blue mt80">Смотреть все (15)</a>
 								</div>
-								<div class="col-sm-4">
+								<div class="col-sm-4 hidden-xs-down">
 									<img src="images/testimonial-1.png" class="img-fluid" alt="">
 								</div>
 							</div>
@@ -506,7 +619,7 @@
 									<div class="testimonial__desc">«Благодаря работе по продвижению на сайте в день присутствует более 200 человек, которые нашли нас через поисковую систему»</div>
 									<a href="#" class="btn btn--blue mt80">Смотреть все (15)</a>
 								</div>
-								<div class="col-sm-4">
+								<div class="col-sm-4 hidden-xs-down">
 									<img src="images/testimonial-1.png" class="img-fluid" alt="">
 								</div>
 							</div>
@@ -519,7 +632,7 @@
 									<div class="testimonial__desc">«Благодаря работе по продвижению на сайте в день присутствует более 200 человек, которые нашли нас через поисковую систему»</div>
 									<a href="#" class="btn btn--blue mt80">Смотреть все (15)</a>
 								</div>
-								<div class="col-sm-4">
+								<div class="col-sm-4 hidden-xs-down">
 									<img src="images/testimonial-1.png" class="img-fluid" alt="">
 								</div>
 							</div>
@@ -540,12 +653,12 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
+				<div class="col-xs-10 offset-xs-1 col-sm-8 offset-sm-2 col-md-6 offset-md-3">
 					<div class="hero__form">
 						<span>Оставьте Ваш телефон и мы свяжемся с Вами в ближайшее время</span>
 						<form action="">
 							<input type="text" name="phone" class="form-input" placeholder="+7 (356) 000 00 00">
-							<button type="submit" class="btn btn--green">Отправить заявку сейчас</button>
+							<button type="submit" class="btn btn--green">Получить консультацию</button>
 						</form>
 					</div>
 				</div>
@@ -558,17 +671,17 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4 col-md-3">
+				<div class="col-sm-4 col-md-3 hidden-xs-down">
 					<img src="images/logo.png" class="img-fluid" alt="">
 					<div class="footer__copy">copyright 2016 Все права защищены </div>
 				</div>
-				<div class="col-sm-4 col-md-6">
+				<div class="col-xs-10 offset-xs-1 offset-sm-0 col-sm-4 col-md-6">
 					<div class="footer__location">
 						<i class="ico ico--location"></i>
 						<span>6220021 Г. Нижний Тагил, ул. Балакинская 1а оф. 302</span>
 					</div>
 				</div>
-				<div class="col-sm-4 col-md-3">
+				<div class="col-xs-10 offset-xs-1 offset-sm-0 col-sm-4 col-md-3">
 					<div class="footer__contacts">
 						<i class="ico ico--phone"></i>
 						<a href="tel:+78005744484">+ 7 800 574 44 84</a>
@@ -582,6 +695,10 @@
 						<a href="mailto:exampleemail@gmail.com">exampleemail@gmail.com</a>
 					</div>
 				</div>
+        <div class="col-xs-12 hidden-sm-up">
+          <img src="images/logo.png" class="img-fluid" alt="">
+          <div class="footer__copy">copyright 2016 Все права защищены </div>
+        </div>
 			</div>
 		</div>
 	</footer>
@@ -594,7 +711,7 @@
 	    <div class="col-sm-12">
 	      <div class="modal__wrap">
           <div class="row">
-            <div class="col-sm-6 offset-sm-3 ">
+            <div class="col-xs-10 offset-xs-1 col-sm-6 offset-sm-3 ">
               <div class="heading text-xs-center">Заказать сайт</div>
               <div class="hero__form">
 								<span>Оставьте Ваш телефон и мы свяжемся с Вами в ближайшее время</span>
