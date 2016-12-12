@@ -1,4 +1,4 @@
-// HEADER
+/// HEADER
 .header__logo
   @include mq($until: mobile)
     text-align: center
@@ -255,7 +255,7 @@
   @include mq($until: mobile)
     padding: 10px 0
     margin-top: -15px
-    min-height: 200px
+    min-height: 220px
   .ico
     position: relative
     @include mq($until: desktop)
@@ -264,6 +264,10 @@
     @include mq($until: tablet)
       transform: scale(.7)
       margin-bottom: -15px
+  .ico--service-5
+    @include mq($until: tablet)
+      margin-left: -40px
+      transform: scale(.6)
   span
     font-size: 16px
     font-weight: 300
@@ -422,6 +426,7 @@ $block4: #badf30
     width: 150%
     height: 2px
     content: ' '
+    z-index: 1
 .steps__desc-numbs
   display: inline-block
   position: absolute
@@ -434,11 +439,13 @@ $block4: #badf30
   display: inline-block
   padding-left: 45px
   @include mq($until: mobile)
-    padding-left: 0px
+    padding-left: 30px
 
 .steps__desc-heading
   font-size: 30px
   display: inline-block
+  word-wrap: break-word
+  word-break: break-all
   @include mq($until: desktop)
     font-size: 26px
   @include mq($until: tablet)
@@ -487,31 +494,33 @@ $block4: #badf30
     content: ' '
     display: block
     transform: rotate(-45deg)
+    position: relative
+    z-index: 2
     width: 190px
     height: 190px
   .ico
     transform: translate(-50%, -50%)
     position: absolute
-    z-index: 3
     top: 50%
     left: 50%
+    z-index: 10
 
 @for $i from 1 through 44
-  @media screen and (max-width: 1200px - ($i * 10))
+  @media screen and (max-width: 1210px - ($i * 10))
     .steps__block
-      margin-left: -28px + $i
-      margin-right: -28px + $i
+      margin-top: -38px + ($i / 2)
+      margin-bottom: -38px + ($i / 2)
     .steps__block:after
-      width: 190px - ($i * 2)
-      height: 190px - ($i * 2)
+      width: 220px - $i
+      height: 220px - $i
     .steps__block:nth-child(odd)
-      margin-left: 23px- $i
-    .steps__block::nth-child(even)
-      margin-right: 23px - $i
+      margin-left: 100px - ($i * 1)
+    .steps__block:nth-child(even)
+      margin-right: 100px - ($i * 2.5)
     .steps__blocks .ico
-      transform: scale(1 - ($i / 100) ) translate(-50%, -50%)
-      margin-left: 0px - ($i / 2)
-      margin-top: 0px - ($i / 2)
+      transform: scale(1 - ($i / 200) ) translate(-50%, -50%)
+      margin-left: 0px - ($i / 3)
+      margin-top: 0px - ($i / 3)
 
 .steps__block--1:after
   background: $block1
@@ -688,12 +697,16 @@ $block4: #badf30
 // footer
 .footer__copy
   color: #777
-  margin-top: 15px
+  margin-top: -60px
+  @include mq($until: tablet)
+    margin-top: -40px
+  @include mq($until: mobile)
+    margin-top: 15px
 
 .footer__logo
   margin-top: 35px
 .footer__location
-  margin-top: 55px
+  margin-top: 45px
   font-size: 14px
   @include mq($until: mobile)
     margin-bottom: 20px
