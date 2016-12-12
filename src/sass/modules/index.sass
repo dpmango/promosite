@@ -136,6 +136,8 @@
 .hero__phone
   font-weight: 300
   margin-top: -3px
+  @include mq($until: desktop)
+    margin-top: 20px
 
 .hero__phone-wrapper
   padding-left: 10px
@@ -494,9 +496,12 @@ $block4: #badf30
   background: $block4
 
 .step-icons-mobile
-  .col-xs-4 .ico
-    max-width: 100%
+  img
     margin-top: 20px
+  // .col-xs-4 .ico
+  //   max-width: 100%
+  //   margin-top: 20px
+  //   background-size: cover
 // CTA
 .cta__from
   margin-top: 80px

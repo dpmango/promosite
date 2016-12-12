@@ -123,6 +123,8 @@ body
   box-shadow: 0px 5px 5px rgba(black, .3)
   z-index: 20
   transition: all .4s ease
+  @include mq($until: desktop)
+    padding: 3px 0
   &.active
     top: 0
     opacity: 1
@@ -133,6 +135,8 @@ body
   //   background-position: 0 -119px
   .hero__phone
     margin-top: 3px
+    @include mq($until: desktop)
+      margin-top: 20px
   .hero__navi
     margin-top: 3px
 
@@ -144,6 +148,8 @@ body
   color: white
   .hero__phone
     margin-top: 10px
+    @include mq($until: desktop)
+      margin-top: 30px
   .hero__navi
     margin-top: 10px
     margin-bottom: 10px
@@ -165,7 +171,7 @@ body
     padding-top: 110px
   @include mq($until: mobile)
     padding-top: 40px
-    min-height: 600px
+    min-height: 700px
   &::after
     content: ' '
     display: block
@@ -193,6 +199,8 @@ body
     height: 100%
     width: 100%
     object-fit: fill
+    @include mq($until: mobile)
+      display: none
 
 .services
   padding-top: 80px
