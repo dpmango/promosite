@@ -80,7 +80,7 @@
     transition: all .4s ease
     &:hover
       a
-        text-decoration: underline
+        opacity: .8
       .hero__navi-list__sublevel
         display: block
 
@@ -656,16 +656,22 @@ $block4: #badf30
 // footer
 .footer__copy
   color: #777
-  margin-top: 45px
-  @include mq($from: mobile)
-    width: 200%
+  margin-top: 15px
+
+.footer__logo
+  margin-top: 35px
 .footer__location
-  margin-top: 25px
+  margin-top: 55px
+  font-size: 14px
   @include mq($until: mobile)
     margin-bottom: 20px
+    margin-top: 15px
   span
     padding-left: 10px
     display: inline-block
+.footer__location-wrap
+  display: inline-block
+  position: relative
 .footer__contacts
   margin-bottom: 30px
   a, span
@@ -677,6 +683,8 @@ $block4: #badf30
     position: absolute
     top: 0
     left: 0
+    &.ico--location
+      top: -7px
     &.ico--phone
       top: -10px
     &.ico--skype

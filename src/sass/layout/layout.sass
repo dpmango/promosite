@@ -43,6 +43,9 @@ input:focus, input:active
 .mt80
   margin-top: 80px
 
+.z10
+  position: relative
+  z-index: 10
 .z50
   position: relative
   z-index: 50
@@ -52,18 +55,18 @@ input:focus, input:active
   min-height: 150px
 
 .heading
-  font-size: 60px
+  font-size: 40px
   line-height: 1.2em
   font-weight: 300
   margin-bottom: 10px
   @include mq($until: wide)
-    font-size: 54px
+    font-size: 38px
   @include mq($until: desktop)
-    font-size: 48px
+    font-size: 34px
   @include mq($until: tablet)
-    font-size: 42px
+    font-size: 32px
   @include mq($until: mobile)
-    font-size: 36px
+    font-size: 28px
 
 .heading--light
   font-size: 40px
@@ -100,9 +103,8 @@ body
   top: 0
   width: 100%
   background: white
-  padding: 40px 0 30px 0
-  @include mq($until: desktop)
-    padding: 30px 0 20px 0
+  z-index: 20
+  padding: 10px 0 10px 0
   @include mq($until: mobile)
     position: relative
   &--inner
@@ -114,7 +116,8 @@ body
   opacity: 0
   top: -300px
   left: 0
-  background: white
+  background: $green
+  color: white
   width: 100%
   padding: 10px 0
   box-shadow: 0px 5px 5px rgba(black, .3)
@@ -126,8 +129,8 @@ body
     @include mq($until: mobile)
       display: none
       top: -300px
-  .ico--hero-phone
-    background-position: 0 -119px
+  // .ico--hero-phone
+  //   background-position: 0 -119px
   .hero__phone
     margin-top: 3px
   .hero__navi
@@ -136,7 +139,7 @@ body
 .inner-navi
   position: relative
   padding: 0px 0
-  margin-bottom: 70px
+  margin-bottom: 20px
   background: $green
   color: white
   .hero__phone
@@ -154,13 +157,42 @@ body
   min-height: 800px
   background: url('../images/bg-hero.png') no-repeat center
   background-size: cover
-  padding-top: 180px
+  padding-top: 120px
   color: white
+  position: relative
+  z-index: 2
   @include mq($until: desktop)
-    padding-top: 150px
+    padding-top: 110px
   @include mq($until: mobile)
-    padding-top: 60px
+    padding-top: 40px
     min-height: 600px
+  &::after
+    content: ' '
+    display: block
+    position: absolute
+    background: rgba(#0011b0, .5)
+    left: 0
+    top: 0
+    z-index: 5
+    height: 100%
+    width: 100%
+  &::before
+    content: ' '
+    display: block
+    position: absolute
+    background: rgba(#c3d0ff, .5)
+    left: 0
+    top: 0
+    z-index: 5
+    height: 100%
+    width: 100%
+  .video-bg
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    object-fit: fill
 
 .services
   padding-top: 80px
@@ -216,8 +248,8 @@ body
 
 .footer
   font-size: 16px
-  padding-top: 55px
-  padding-bottom: 60px
+  padding-top: 25px
+  padding-bottom: 20px
   @include mq($until: desktop)
     font-size: 14px
   @include mq($until: mobile)
@@ -228,6 +260,7 @@ body
 
 .map
   position: relative
+  margin-top: -20px
   #map
     width: 100%
     height: 90vh

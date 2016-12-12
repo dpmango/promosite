@@ -105,7 +105,7 @@ $(document).ready(function(){
 		if ($('.floater').is('.floater')) {
 			var winPos = $(window).scrollTop();
 
-			if (winPos > 150) {
+			if (winPos > 100) {
 				$('.floater').addClass('active');
 			} else {
 				$('.floater').removeClass('active');
