@@ -70,6 +70,9 @@
     padding: 10px 14px 10px 0
     transition: all .4s ease
     display: inline-block
+    @include mq($until: tablet)
+      padding-right: 7px
+
 
 .hero__navi-list
   margin: 0
@@ -200,11 +203,11 @@
     @include mq($until: desktop)
       font-size: 14px
   .form-input
-    @include mq($until: desktop)
+    @include mq($until: bp1080)
       display: block
       width: 100%
   button
-    @include mq($until: desktop)
+    @include mq($until: bp1080)
       display: block
       width: 100%
 
