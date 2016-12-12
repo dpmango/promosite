@@ -34,7 +34,7 @@ gulp.task('build', function (callback) {
   runSequence(
     'clean:dist',
     'sass',
-    ['useref', 'images', 'fonts'],
+    ['useref', 'images', 'fonts', 'video'],
     callback
   )
 })
@@ -89,8 +89,13 @@ gulp.task('images', function(){
 });
 
 gulp.task('fonts', function() {
-  return gulp.src('.src/fonts/**/*')
+  return gulp.src('./src/fonts/**/*')
   .pipe(gulp.dest('dist/fonts'))
+})
+
+gulp.task('video', function() {
+  return gulp.src('./src/video/**/*')
+  .pipe(gulp.dest('dist/video'))
 })
 
 gulp.task('clean:dist', function() {

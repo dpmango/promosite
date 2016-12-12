@@ -427,15 +427,23 @@ $block4: #badf30
   position: absolute
   top: -22px
   left: 0
-
+  @include mq($until: mobile)
+    top: -18px
 .steps__desc__text
   display: inline-block
   padding-left: 45px
+  @include mq($until: mobile)
+    padding-left: 40px
 
 .steps__desc-heading
   font-size: 30px
   display: inline-block
+  @include mq($until: desktop)
+    font-size: 26px
+  @include mq($until: tablet)
+    font-size: 24px
   @include mq($until: mobile)
+    font-size: 22px
     word-wrap: break-word
 
 .steps__desc-desc
@@ -449,6 +457,8 @@ $block4: #badf30
   display: inline-block
   position: relative
   line-height: 1em
+  @include mq($until: mobile)
+    font-size: 55px
 
 .ico-step-num-1
   color: $block1
@@ -459,7 +469,6 @@ $block4: #badf30
 .ico-step-num-4
   color: $block4
 
-
 .steps__blocks
   text-align: center
 
@@ -469,10 +478,10 @@ $block4: #badf30
   margin: -28px 0
   &:nth-child(odd)
     float: left
-    margin-left: 22px
+    margin-left: 23px
   &:nth-child(even)
     float: right
-    margin-right: 22px
+    margin-right: 23px
   &:after
     content: ' '
     display: block
@@ -485,6 +494,23 @@ $block4: #badf30
     z-index: 3
     top: 50%
     left: 50%
+
+@for $i from 1 through 44
+  @media screen and (max-width: 1200px - ($i * 10))
+    .steps__block
+      margin-left: -28px + $i
+      margin-right: -28px + $i
+    .steps__block:after
+      width: 190px - ($i * 2)
+      height: 190px - ($i * 2)
+    .steps__block:nth-child(odd)
+      margin-left: 23px- $i
+    .steps__block::nth-child(even)
+      margin-right: 23px - $i
+    .steps__blocks .ico
+      transform: scale(1 - ($i / 100) ) translate(-50%, -50%)
+      margin-left: 0px - ($i / 2)
+      margin-top: 0px - ($i / 2)
 
 .steps__block--1:after
   background: $block1
