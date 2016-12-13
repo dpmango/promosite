@@ -59,7 +59,7 @@ gulp.task('postcss', function() {
 gulp.task('sass', function() {
   return gulp.src('./src/sass/*.+(scss|sass)')
       .pipe( sourcemaps.init() )
-      .pipe( sass({outputStyle: 'nested'}, {includePaths : ['./src/sass'] }) )
+      .pipe( sass({outputStyle: 'expanded'}, {includePaths : ['./src/sass'] }) )
       .pipe( postcss(processors) )
       .pipe( sourcemaps.write('.') )
       .pipe( gulp.dest('./src/css') ) //change for prod
