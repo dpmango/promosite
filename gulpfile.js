@@ -45,7 +45,7 @@ gulp.task('build', function (callback) {
 
 var processors = [
     autoprefixer({browsers: ['> 1%', 'last 5 versions', 'IE 8']}),
-    cssnano(),
+    //cssnano(),
 ];
 
 gulp.task('postcss', function() {
@@ -59,7 +59,7 @@ gulp.task('postcss', function() {
 gulp.task('sass', function() {
   return gulp.src('./src/sass/*.+(scss|sass)')
       .pipe( sourcemaps.init() )
-      .pipe( sass({ includePaths : ['./src/sass'] }) )
+      .pipe( sass({outputStyle: 'nested'}, {includePaths : ['./src/sass'] }) )
       .pipe( postcss(processors) )
       .pipe( sourcemaps.write('.') )
       .pipe( gulp.dest('./src/css') ) //change for prod
